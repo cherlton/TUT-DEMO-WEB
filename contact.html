@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUT DEMO WEBSITE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        
+       
+            <nav> 
+                <a href="index.html"><img src="images/img4.png" alt="logo"></a> 
+                <div class="nav-link" id="nav-link">
+                   
+          <i class="fa fa-window-close" onclick="hideMenu()"></i>
+         
+          
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="course.html">course</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="contact.html">contact</a></li>
+
+      </ul>
+      
+      
+           
+            
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+            <div class="text-box">
+                <h1>Contact Us</h1>
+            </div>
+        
+    </section>
+
+
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114763.8273261964!2d28.094105399999997!3d-25.98870735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9571fd4965198b%3A0x87b2105c1c8bfe22!2sMidrand!5e0!3m2!1sen!2sza!4v1721743610642!5m2!1sen!2sza" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="contact-content">
+        <div class="row">
+         <div class="contact-col">
+            <div>
+                <i class="fa fa-home"></i>
+                <span>
+                  <h4>Emmanuel Mabje Street</h4>  
+                  <p>South Africa, Gauteng Tembisa</p>
+                </span>
+            </div>
+            
+            <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                  <h4>(+27) 65-242-1927</h4>  
+                  <p>09:00-15:00,Monday-Friday</p>
+                </span>
+            </div>
+            
+            <div>
+                <i class="fa fa-envelope-o"></i>
+                <span>
+                <h4>cherltonmhangwana@gmail.com</h4>  
+                  <p>Email for any query</p>
+                </span>
+            </div>
+         </div>
+         <div class="contact-col">
+            <form action="email-handler.php" method="post" >
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="text" name="subject" placeholder="Enter your subject" required>
+                <textarea rows="8" name="message" placeholder="Place your message here"></textarea>
+              
+                <input type="submit" class="btn-submit" value="Send Message">
+                        
+              
+                
+            </form>
+         </div>
+        </div>
+        
+        
+    </section>
+   
+
+
+    <section class="about">
+            <h4>About Us</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, sequi! <br>
+                Lorem ipsum dolor sit amet consectetur.
+
+            </p>
+            
+            <div class="icon">
+                     <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                    <div>
+    <p>I <i class="fa fa-heart-o"></i> css maan!!</p>                    
+    </section>
+
+
+    <script>
+        var nav_link=document.getElementById("nav-link");
+        function showMenu(){
+            nav_link.style.right="0";
+
+        }
+        function hideMenu(){
+            nav_link.style.right="-200px";
+            
+        }
+    </script>
+</body>
+</html>
