@@ -75,12 +75,12 @@
              </p>
                 <div class="comment-box">
                     <h3>Leave A Comment</h3>
-                    <form class="form-input" action="email-handler.php" method="post">
-                        <input type="text" name="name" placeholder="Enter your full name">
-                        <input type="email" name="email" placeholder="Enter your email">
-                        <input type="text" name="subject" placeholder="Enter your subject" required>
-                        <textarea rows="15" name="message"placeholder="Your Comment here"></textarea>
-                        <a href="" class="btn-contact">SUBMIT</a>
+                    <form id="form" class="form-input" action="email-handler.php" method="post">
+                        <input type="text"  id="from_name" name="from_name" placeholder="Enter your name" required>
+                <input type="email"   id="to_name" name="to_name" placeholder="Enter your email" required>
+               
+                <textarea rows="15" id="message" name="message" placeholder="Place your message here"></textarea>
+                <input type="submit"  id="button"  class="btn-submit" value="Submit">
 
                     </form>
                 </div>
@@ -132,6 +132,35 @@
     <p>I <i class="fa fa-heart-o"></i> css maan!!</p>                    
     </section>
 
+    
+   <script>
+    const btn = document.getElementById('button');
+  
+  document.getElementById('form')
+   .addEventListener('submit', function(event) {
+     event.preventDefault();
+  
+     btn.value = 'Sending...';
+  
+     const serviceID = 'default_service';
+     const templateID = 'template_p3lvvzj';
+  
+     emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Send Email';
+        alert('Your is email Sent successfully!');
+      }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+  });
+     </script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('gO9CPzKwkrU9YSeyy')
+  </script>
 
     <script>
         var nav_link=document.getElementById("nav-link");
